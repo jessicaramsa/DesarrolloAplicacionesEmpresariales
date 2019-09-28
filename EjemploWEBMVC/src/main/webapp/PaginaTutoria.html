@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 align="center">
+            <font face="Arial">Concertar una tutoría</font>
+        </h1>
+        <form action="Tutorias" method="post">
+            <font face="Arial">Alumno</font><br>
+            <input type="text" name="alumno" size="60">
+
+            <font face="Arial">Profesor:</font>
+            <select name="profesor">
+                <option value="">Profesor 1</option>
+                <option value="">Profesor 2</option>
+                <option value="">Profesor 3</option>
+                <option value="">Profesor 4</option>
+                <option value="">Profesor 5</option>
+                <option value="">Profesor 6</option>
+            </select>
+
+            <font face="Arial">Día:</font><br>
+            <select name="dia">
+                <option value="">Lunes</option>
+                <option value="">Martes</option>
+                <option value="">Miercoles</option>
+                <option value="">Jueves</option>
+                <option value="">Viernes</option>
+            </select>
+
+            <font face="Arial">Hora:</font>&nbsp;&nbsp;&nbsp;
+            <font face="Arial">10</font>
+            <input type="radio" name="hora" value="10" checked>
+            &nbsp;&nbsp;&nbsp;
+            <font face="Arial">12</font>
+            <input type="radio" name="hora" value="12" checked>
+            &nbsp;&nbsp;&nbsp;
+            <font face="Arial">16</font>
+            <input type="radio" name="hora" value="16" checked>
+            &nbsp;&nbsp;&nbsp;
+            <font face="Arial">18</font>
+            <input type="radio" name="hora" value="18" checked>
+            &nbsp;&nbsp;&nbsp;
+            <br><br><font face="Arial">Asunto:</font><br>
+            <textarea name="asunto" rows="5" cols="40"></textarea>
+            <br><br><input type="submit" value="Enviar datos">
+            &nbsp;&nbsp;&nbsp;
+            <input type="reset" value="Reset">
+        </form>
+    </body>
+</html>

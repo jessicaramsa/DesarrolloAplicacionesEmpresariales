@@ -5,16 +5,16 @@
         <servlet-class>controlador.SeleccionSemestre</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>HolaMundo</servlet-name>
-        <servlet-class>controlador.HolaMundo</servlet-class>
+        <servlet-name>FechaHora</servlet-name>
+        <servlet-class>controlador.FechaHora</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SeleccionSemestre.do</servlet-name>
         <url-pattern>/SeleccionSemestre</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>HolaMundo</servlet-name>
-        <url-pattern>/HolaMundo</url-pattern>
+        <servlet-name>FechaHora</servlet-name>
+        <url-pattern>/FechaHora</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

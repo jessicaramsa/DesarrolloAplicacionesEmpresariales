@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author jessi
  */
-public class HolaMundo extends HttpServlet {
+public class FechaHora extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,7 +32,15 @@ public class HolaMundo extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        
         try (PrintWriter out = response.getWriter()) {
+            out.println("<center>");
+            for (int i = 6; i > 0; i--) {
+                out.println("<h" + i +">¡¡¡Hola Mundo!!!</h" + i + ">");
+            }
+            out.println("</center>");
+
             Calendar fechaHora = new GregorianCalendar();
             out.println("Fecha: " +
                     fechaHora.get(Calendar.DAY_OF_MONTH) + "/" +
