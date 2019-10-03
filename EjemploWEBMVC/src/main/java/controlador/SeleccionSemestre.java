@@ -35,17 +35,6 @@ public class SeleccionSemestre extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 //            out.println("Seleccion de materias<br>");
-            String s = request.getParameter("semestre");
-//            out.println("<br>El semestre seleccionado es: " + s);
-            ExpertoEnMaterias experto = new ExpertoEnMaterias();
-            List resultados = experto.getMaterias(s);
-            
-//            Iterator it = resultados.iterator();
-//            while (it.hasNext()) {
-//                out.println("<br>" + it.next());
-//            }
-
-            request.setAttribute("resultado", resultados);
             
             RequestDispatcher vista = request.getRequestDispatcher("resultado.jsp");
             vista.forward(request, response);
