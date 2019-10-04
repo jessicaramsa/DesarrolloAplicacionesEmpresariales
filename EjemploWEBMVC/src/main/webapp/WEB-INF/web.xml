@@ -8,6 +8,14 @@
         <servlet-name>FechaHora</servlet-name>
         <servlet-class>controlador.FechaHora</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Tutorias</servlet-name>
+        <servlet-class>controlador.Tutorias</servlet-class>
+        <init-param>
+            <param-name>RutaCarpeta</param-name>
+            <param-value>c:/Temp/dap</param-value>
+        </init-param>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SeleccionSemestre.do</servlet-name>
         <url-pattern>/SeleccionSemestre</url-pattern>
@@ -15,6 +23,10 @@
     <servlet-mapping>
         <servlet-name>FechaHora</servlet-name>
         <url-pattern>/FechaHora</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Tutorias</servlet-name>
+        <url-pattern>/Tutorias</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
