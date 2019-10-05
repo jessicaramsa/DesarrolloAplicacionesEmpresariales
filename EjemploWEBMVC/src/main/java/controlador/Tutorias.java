@@ -52,13 +52,22 @@ public class Tutorias extends HttpServlet {
 
                 /* Tomar los datos recibidos del cliente y escribirlos
                    en el archivo. Se finaliza cada registro con la marca
-                   <FIN> para su posterior identificacion
-                */
+                   <FIN> para su posterior identificación */
                 Enumeration nombresParams = request.getParameterNames();
                 while (nombresParams.hasMoreElements()) {
                     String param = (String) nombresParams.nextElement();
                     String valor = request.getParameter(param);
                     fichTutorias.println(param + ": " + valor);
+                }
+                
+                /* Mediante el siguiente código se obtienen los checkbox
+                   que se tengan seleccionados en la página web de la que se
+                   recibe la petición
+                   Este código no funcionaría hasta que se tengan agregados los
+                   controles correspondientes en la página HTML */
+                String[] valoresTransportes = request.getParameterValues("transporte");
+                for (int i = 0; i < valoresTransportes.length; i++) {
+                    fichTutorias.println(valoresTransportes[i]);
                 }
 
                 fichTutorias.println("<FIN>");
