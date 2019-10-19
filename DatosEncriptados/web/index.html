@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="DesencriptarDatos" method="POST" onsubmit="onSubmit()">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <input type="submit">
+    </form>
+    <script src="crypto.js"></script>
+    <script src="pbkdf2.js"></script>
+    <script src="AesUtil.js"></script>
+    <script type="text/javascript">
+        console.log("tratados");
+        function encrypt(input) {
+            let iv = CryptoJS.lib.WordArray.random(128 / 8).toString(CryptoJS.enc.Hex);
+            let salt = CryptoJS.lib.WordArray.random(128 / 8).toString(CryptoJS.enc.Hex);
+            let aesUtil = new AesUtil(128, 1000);
+            let ciphertext = aesUtil.encrypt(salt, iv, "password", input);
+
+            let aesOutput = (iv + "::" + salt + "::" + ciphertext);
+            let output = btoa(aesOutput);
+            return output;
+        }
+        console.log(encrypt("onichan"));
+
+        function onSubmit(evt) {
+            let emailInput = document.getElementById("email");
+            let passwordInput = document.getElementById("password");
+
+            emailInput.value = encrypt(emailInput.value);
+            passwordInput.value = encrypt(passwordInput.value);
+
+            return truel;
+        }
+    </script>
+</body>
+</html>
