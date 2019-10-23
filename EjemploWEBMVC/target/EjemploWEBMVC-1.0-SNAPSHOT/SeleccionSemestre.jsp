@@ -1,10 +1,19 @@
+<%-- 
+    Document   : SeleccionSemestre
+    Created on : 23/10/2019, 03:25:14 PM
+    Author     : Uroboros
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Guía de materias</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Guía de materias</title>
     </head>
     <body>
+        <h3>Bienvenido ${sessionScope.username}</h3>
+        
         <h1 align="center">Guía de materias por semestre</h1>
         <form action="SeleccionSemestre" method="GET">
             <p>Seleccione el semestre</p>

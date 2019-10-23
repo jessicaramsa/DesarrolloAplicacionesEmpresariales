@@ -16,6 +16,10 @@
             <param-value>c:/Temp/dap</param-value>
         </init-param>
     </servlet>
+    <servlet>
+        <servlet-name>IniciarSesion</servlet-name>
+        <servlet-class>controlador.IniciarSesion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SeleccionSemestre.do</servlet-name>
         <url-pattern>/SeleccionSemestre</url-pattern>
@@ -27,6 +31,10 @@
     <servlet-mapping>
         <servlet-name>Tutorias</servlet-name>
         <url-pattern>/Tutorias</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IniciarSesion</servlet-name>
+        <url-pattern>/IniciarSesion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

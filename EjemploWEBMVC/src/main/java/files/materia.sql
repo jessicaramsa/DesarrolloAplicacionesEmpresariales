@@ -41,3 +41,17 @@ insert into materias(nombre, semestre) values('Administracion de Redes', 8);
 
 insert into materias(nombre, semestre) values('Inteligencia Artificial', 9);
 insert into materias(nombre, semestre) values('Residencias Profesionales', 9);
+
+/* Usuarios */
+create table usuarios(
+  ID int auto_increment primary key,
+  nombre varchar(50) not null,
+  primerApellido varchar(50) not null,
+  username varchar(20) not null,
+  email varchar(50) not null,
+  password varchar(8) not null
+);
+
+insert into usuarios(nombre, primerApellido, username, email, password) values('Jorge', 'Zapata', 'jorgezapata', 'jorgezapata@email.com', 'unafacil');
+insert into usuarios(nombre, primerApellido, username, email, password) values('Jéssica', 'Ramírez', 'jessicaramsa', 'jessicaramsa@gmail.com', 'unafacil');
+insert into usuarios(nombre, primerApellido, username, email, password) values('prueba', 'prueba', 'prueba', 'prueba@email.com', 'unafacil');
