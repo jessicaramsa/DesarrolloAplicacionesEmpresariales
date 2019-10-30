@@ -5,6 +5,8 @@
 --%>
 <%@page import="Clases.Contador"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include %>
+<%@taglib uri="https:/java.sun.com/istl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
     <head>
