@@ -14,7 +14,7 @@
     <body>
         <div align="center">
             <!-- Invocar al servicio web -->
-            <%
+            <!-- <%
                 String sctGrados = request.getParameter("ctGrados");
                 if (sctGrados != null && !sctGrados.isEmpty()) {
                     double nGrados = 0.0;
@@ -46,7 +46,7 @@
                         System.out.println(ex.getMessage());
                     }
                 }
-            %>
+            %> -->
             <hr>
             <form style="font-family: arial">
                 Grados:<br>

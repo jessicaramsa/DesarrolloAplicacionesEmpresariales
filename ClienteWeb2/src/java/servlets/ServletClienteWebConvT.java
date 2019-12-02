@@ -30,7 +30,8 @@ public class ServletClienteWebConvT extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void processRequest(HttpServletRequest request,
+            HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -40,22 +41,17 @@ public class ServletClienteWebConvT extends HttpServlet {
             
             try {
                 String sctGrados = request.getParameter("ctGrados");
-                if (sctGrados == null && sctGrados.isEmpty()) {
+                if (sctGrados == null && sctGrados.isEmpty())
                     throw new NumberFormatException();
-                }
-                // Crear un objeto de la clase que implementa el servicio
+                
                 service = new jaxws.SWConverTemps_Service();
                 port = service.getSWConverTempsPort();
-                // Obtener el valor numérico escrito en la caja de texto
                 nGrados = Double.parseDouble(sctGrados);
-                // Realizar la conversión invocando al método correspondiente
-                // del objeto port de tipo SWConverTemps
                 String convertir = request.getParameter("bgGrados");
                 if (convertir.compareTo("aFahr") == 0)
                     nGrados = port.convCentAFahr(nGrados);
                 if (convertir.compareTo("aCent") == 0)
                     nGrados = port.convFahrACent(nGrados);
-                // Mostrar el resultado en la caja de texto
                 Double objGrados = nGrados;
                 request.setAttribute("result", objGrados);
                 mostrarPagina(request, response);
